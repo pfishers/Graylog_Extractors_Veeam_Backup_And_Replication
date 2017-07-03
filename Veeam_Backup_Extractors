@@ -1,0 +1,171 @@
+{
+  "extractors": [
+    {
+      "title": "Event:110 - Extract Job_Name From Message",
+      "extractor_type": "split_and_index",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "Job_Name",
+      "extractor_config": {
+        "index": 2,
+        "split_by": "'"
+      },
+      "condition_type": "string",
+      "condition_value": "110"
+    },
+    {
+      "title": "Event:110 - Extract Job_Type From Message",
+      "extractor_type": "split_and_index",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "Job_Type",
+      "extractor_config": {
+        "index": 6,
+        "split_by": " "
+      },
+      "condition_type": "string",
+      "condition_value": "110"
+    },
+    {
+      "title": "Event:190 - Extract Job_Type From Message",
+      "extractor_type": "split_and_index",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "Job_Type",
+      "extractor_config": {
+        "index": 6,
+        "split_by": " "
+      },
+      "condition_type": "string",
+      "condition_value": "190"
+    },
+    {
+      "title": "Event:190 - Extract Job_Name From Message",
+      "extractor_type": "split_and_index",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "Job_Name",
+      "extractor_config": {
+        "index": 2,
+        "split_by": "'"
+      },
+      "condition_type": "string",
+      "condition_value": "190"
+    },
+    {
+      "title": "Event:250 - Extract State_Name From Message",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "State_Name",
+      "extractor_config": {
+        "regex_value": "has finished with (.+?)\\s.*"
+      },
+      "condition_type": "string",
+      "condition_value": "250"
+    },
+    {
+      "title": "Event:250 - Extract Object_Name From Message",
+      "extractor_type": "split_and_index",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "Object_Name",
+      "extractor_config": {
+        "index": 2,
+        "split_by": "'"
+      },
+      "condition_type": "string",
+      "condition_value": "250"
+    },
+    {
+      "title": "Event:150 - Extract State_Name From Message",
+      "extractor_type": "split_and_index",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "State_Name",
+      "extractor_config": {
+        "index": 2,
+        "split_by": "'"
+      },
+      "condition_type": "string",
+      "condition_value": "150"
+    },
+    {
+      "title": "Event:150 - Extract Object_Name From Message",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "Object_Name",
+      "extractor_config": {
+        "regex_value": "VM (.+?)\\s.*"
+      },
+      "condition_type": "string",
+      "condition_value": "150"
+    },
+    {
+      "title": "Event:190 - Extract State_Name From Message",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "State_Name",
+      "extractor_config": {
+        "regex_value": "finished with (.+?)\\."
+      },
+      "condition_type": "string",
+      "condition_value": "190"
+    },
+    {
+      "title": "Event:210 - Extract Username From Message",
+      "extractor_type": "split_and_index",
+      "converters": [
+        {
+          "type": "lowercase",
+          "config": {}
+        }
+      ],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "Username",
+      "extractor_config": {
+        "index": 2,
+        "split_by": "'"
+      },
+      "condition_type": "string",
+      "condition_value": "210 Restore session"
+    },
+    {
+      "title": "Event:290 - Extract State_Name From Message",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "State_Name",
+      "extractor_config": {
+        "regex_value": "has finished with (.+?)\\ .*"
+      },
+      "condition_type": "string",
+      "condition_value": "290 The restore session"
+    }
+  ],
+  "version": "2.2.0-SNAPSHOT"
+}
