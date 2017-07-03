@@ -39,7 +39,7 @@ Below is a breakdown of what is extracted from the logs
                    Extract Object_Name From Message
                    Extract State_Name From Message
                    
-  This is by no means a complete extractor but was created for a specific need with the intent of keeping logs to the minimum, I posted this in the hope this may useful to others.
+  This is by no means a complete extractor for all fields/logs created by Veeam, but was created for a specific need with the intent of keeping logs to the minimum, I posted this in the hope this may useful to others.
   
   Thanks.
   
